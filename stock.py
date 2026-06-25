@@ -9,7 +9,7 @@ class Location(metaclass=PoolMeta):
     __name__ = 'stock.location'
     # Restore warehouse as a Function field in this module because stock
     # replaced it with a property and search_warehouse requires a searcher.
-    warehouse = fields.Function(
+    warehouse_ = fields.Function(
         fields.Many2One('stock.location', 'Warehouse'),
         'get_warehouse', searcher='search_warehouse')
 

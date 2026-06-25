@@ -18,7 +18,7 @@ class StockWarehouseSearchTestCase(ModuleTestCase):
         supplier, = Location.search([('code', '=', 'SUP')])
         storage, = Location.search([('code', '=', 'STO')])
         warehouse, = Location.search([('code', '=', 'WH')])
-        self.assertNotEqual(len(Location.search([('warehouse.code', '=', 'WH')])), 0)
+        self.assertNotEqual(len(Location.search([('warehouse_.code', '=', 'WH')])), 0)
 
 
 del ModuleTestCase
